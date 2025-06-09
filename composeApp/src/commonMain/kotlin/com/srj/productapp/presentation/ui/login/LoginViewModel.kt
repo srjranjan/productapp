@@ -25,7 +25,7 @@ class LoginViewModel(private val authSettings: AuthSettings) : ScreenModel {
 
 
     fun onEmailChange(email: String) {
-        val emailError = if (isValidEmail(email)) null else "Invalid email format"
+        val emailError = if (isValidEmail(email)) null else "Invalid email"
         _uiState.update { it.copy(email = email, emailError = emailError) }
 
     }
